@@ -32,7 +32,7 @@ export const RestaurantsScreen = ({ navigation }) => {
     <SafeArea>
       {isLoading && (
         <LoadingContainer>
-          <Loading size={50} animating={true} color="#FF5733" />
+          <Loading size={50} animating={true} color="black" />
         </LoadingContainer>
       )}
       <Search />
@@ -42,7 +42,9 @@ export const RestaurantsScreen = ({ navigation }) => {
           return (
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate("RestaurantDetail", { restaurant: item })
+                navigation.navigate("RestaurantDetail", {
+                  restaurant: item,
+                })
               }
             >
               <Spacer position="bottom" size="large">
